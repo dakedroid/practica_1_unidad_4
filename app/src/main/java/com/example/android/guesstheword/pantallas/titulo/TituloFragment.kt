@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.guesstheword.screens.title
+package com.example.android.guesstheword.pantallas.titulo
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -29,7 +29,7 @@ import com.example.android.guesstheword.databinding.TitleFragmentBinding
 /**
  * Fragment for the starting or title screen of the app
  */
-class TitleFragment : Fragment() {
+class TituloFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
@@ -38,7 +38,7 @@ class TitleFragment : Fragment() {
                 inflater, R.layout.title_fragment, container, false)
 
         binding.playGameButton.setOnClickListener {
-            findNavController().navigate(TitleFragmentDirections.actionTitleToGame())
+            findNavController().navigate(TituloFragmentDirections.actionTitleToGame())
         }
         return binding.root
     }

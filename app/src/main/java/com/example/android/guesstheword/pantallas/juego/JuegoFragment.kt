@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.guesstheword.screens.game
+package com.example.android.guesstheword.pantallas.juego
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -29,7 +29,7 @@ import com.example.android.guesstheword.databinding.GameFragmentBinding
 /**
  * Fragment where the game is played
  */
-class GameFragment : Fragment() {
+class JuegoFragment : Fragment() {
 
     // agregar comentario.. a nuestro cdogio
 
@@ -73,27 +73,27 @@ class GameFragment : Fragment() {
      */
     private fun resetList() {
         wordList = mutableListOf(
-                "queen",
+                "princesa",
                 "hospital",
-                "basketball",
-                "cat",
-                "change",
-                "snail",
-                "soup",
-                "calendar",
-                "sad",
-                "desk",
-                "guitar",
-                "home",
-                "railway",
-                "zebra",
-                "jelly",
-                "car",
-                "crow",
-                "trade",
-                "bag",
-                "roll",
-                "bubble"
+                "baloncesto",
+                "gato",
+                "cambio",
+                "perro",
+                "sopa",
+                "calendario",
+                "triste",
+                "escritorio",
+                "guitarra",
+                "casa",
+                "carretera",
+                "elefante",
+                "pinocho",
+                "carro",
+                "gente",
+                "teléfono",
+                "bolsa",
+                "datos",
+                "arma"
         )
         wordList.shuffle()
     }
@@ -102,7 +102,7 @@ class GameFragment : Fragment() {
      * Called when the game is finished
      */
     private fun gameFinished() {
-        val action = GameFragmentDirections.actionGameToScore(score)
+        val action = JuegoFragmentDirections.actionGameToScore(score)
         findNavController(this).navigate(action)
     }
 

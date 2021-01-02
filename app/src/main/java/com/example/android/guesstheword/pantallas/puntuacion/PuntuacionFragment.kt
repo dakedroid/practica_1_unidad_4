@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.guesstheword.screens.score
+package com.example.android.guesstheword.pantallas.puntuacion
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -30,7 +30,7 @@ import com.example.android.guesstheword.databinding.ScoreFragmentBinding
 /**
  * Fragment where the final score is shown, after the game is over
  */
-class ScoreFragment : Fragment() {
+class PuntuacionFragment : Fragment() {
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -47,7 +47,7 @@ class ScoreFragment : Fragment() {
         )
 
         // Get args using by navArgs property delegate
-        val scoreFragmentArgs by navArgs<ScoreFragmentArgs>()
+        val scoreFragmentArgs by navArgs<PuntuacionFragmentArgs>()
         binding.scoreText.text = scoreFragmentArgs.score.toString()
         binding.playAgainButton.setOnClickListener { onPlayAgain() }
 
@@ -55,6 +55,6 @@ class ScoreFragment : Fragment() {
     }
 
     private fun onPlayAgain() {
-        findNavController().navigate(ScoreFragmentDirections.actionRestart())
+        findNavController().navigate(PuntuacionFragmentDirections.actionRestart())
     }
 }
