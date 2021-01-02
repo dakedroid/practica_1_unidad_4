@@ -52,7 +52,7 @@ class JuegoFragment : Fragment() {
         // Inflate view and obtain an instance of the binding class
         binding = DataBindingUtil.inflate(
                 inflater,
-                R.layout.game_fragment,
+                R.layout.juego_fragment,
                 container,
                 false
         )

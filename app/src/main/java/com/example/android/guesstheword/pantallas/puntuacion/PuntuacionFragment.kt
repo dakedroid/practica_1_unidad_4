@@ -41,7 +41,7 @@ class PuntuacionFragment : Fragment() {
         // Inflate view and obtain an instance of the binding class.
         val binding: ScoreFragmentBinding = DataBindingUtil.inflate(
                 inflater,
-                R.layout.score_fragment,
+                R.layout.puntuacion_fragment,
                 container,
                 false
         )
