@@ -24,7 +24,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.android.guesstheword.R
-import com.example.android.guesstheword.databinding.TitleFragmentBinding
+import com.example.android.guesstheword.databinding.TituloFragmentBinding
 
 /**
  * Fragment for the starting or title screen of the app
@@ -34,7 +34,7 @@ class TituloFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
-        val binding: TitleFragmentBinding = DataBindingUtil.inflate(
+        val binding: TituloFragmentBinding = DataBindingUtil.inflate(
                 inflater, R.layout.titulo_fragment, container, false)
 
         binding.playGameButton.setOnClickListener {

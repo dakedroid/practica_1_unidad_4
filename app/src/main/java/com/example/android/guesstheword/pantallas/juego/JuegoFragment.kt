@@ -24,7 +24,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.example.android.guesstheword.R
-import com.example.android.guesstheword.databinding.GameFragmentBinding
+import com.example.android.guesstheword.databinding.JuegoFragmentBinding
 
 /**
  * Fragment where the game is played
@@ -44,7 +44,7 @@ class JuegoFragment : Fragment() {
     // The list of words - the front of the list is the next word to guess
     private lateinit var wordList: MutableList<String>
 
-    private lateinit var binding: GameFragmentBinding
+    private lateinit var binding: JuegoFragmentBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
