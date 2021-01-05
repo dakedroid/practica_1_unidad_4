@@ -8,13 +8,13 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="juego_destination">
+                  <entry key="juego_fragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="500" />
-                            <option name="y" value="33" />
+                            <option name="x" value="490" />
+                            <option name="y" value="321" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -29,13 +29,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="puntuacion_destination">
+                  <entry key="puntuacion_fragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="116" />
-                            <option name="y" value="-122" />
+                            <option name="x" value="182" />
+                            <option name="y" value="-164" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -50,13 +50,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="titulo_destination">
+                  <entry key="titulo_fragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="7" />
-                            <option name="y" value="161" />
+                            <option name="x" value="-151" />
+                            <option name="y" value="301" />
                           </Point>
                         </option>
                         <option name="myPositions">

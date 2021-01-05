@@ -31,10 +31,6 @@ import com.example.android.guesstheword.databinding.JuegoFragmentBinding
  */
 class JuegoFragment : Fragment() {
 
-    // agregar comentario.. a nuestro cdogio
-
-    // reductor de ruido a ver si nos quita un poco ...
-
     // The current word
     private var word = ""
 
@@ -77,7 +73,7 @@ class JuegoFragment : Fragment() {
                 "hospital",
                 "baloncesto",
                 "gato",
-                "cambio",
+                "monedas",
                 "perro",
                 "sopa",
                 "calendario",
@@ -87,12 +83,12 @@ class JuegoFragment : Fragment() {
                 "casa",
                 "carretera",
                 "elefante",
-                "pinocho",
+                "llanta",
                 "carro",
-                "gente",
+                "silla",
                 "teléfono",
                 "bolsa",
-                "datos",
+                "botella",
                 "arma"
         )
         wordList.shuffle()

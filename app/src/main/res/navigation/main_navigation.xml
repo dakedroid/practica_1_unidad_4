@@ -17,16 +17,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/titulo_destination">
+    app:startDestination="@id/titulo_fragment">
 
     <fragment
-        android:id="@+id/titulo_destination"
+        android:id="@+id/titulo_fragment"
         android:name="com.example.android.guesstheword.pantallas.titulo.TituloFragment"
         android:label="titulo_fragment"
         tools:layout="@layout/titulo_fragment">
         <action
             android:id="@+id/action_title_to_game"
-            app:destination="@id/juego_destination"
+            app:destination="@id/juego_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:launchSingleTop="true"
@@ -34,33 +34,33 @@
             app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
-        android:id="@+id/juego_destination"
+        android:id="@+id/juego_fragment"
         android:name="com.example.android.guesstheword.pantallas.juego.JuegoFragment"
         android:label="juego_fragment"
         tools:layout="@layout/juego_fragment">
         <action
             android:id="@+id/action_game_to_score"
-            app:destination="@id/puntuacion_destination"
+            app:destination="@id/puntuacion_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:launchSingleTop="true"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left"
-            app:popUpTo="@+id/titulo_destination" />
+            app:popUpTo="@+id/titulo_fragment" />
     </fragment>
     <fragment
-        android:id="@+id/puntuacion_destination"
+        android:id="@+id/puntuacion_fragment"
         android:name="com.example.android.guesstheword.pantallas.puntuacion.PuntuacionFragment"
         android:label="puntuacion_fragment"
         tools:layout="@layout/puntuacion_fragment">
         <action
             android:id="@+id/action_restart"
-            app:destination="@+id/juego_destination"
+            app:destination="@+id/juego_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left"
-            app:popUpTo="@+id/titulo_destination" />
+            app:popUpTo="@+id/titulo_fragment" />
         <argument
             android:name="score"
             android:defaultValue="0"
