@@ -32,13 +32,13 @@ import com.example.android.guesstheword.databinding.JuegoFragmentBinding
 class JuegoFragment : Fragment() {
 
     // The current word
-    private var word = ""
+    private var palabra = ""
 
     // The current score
-    private var score = 0
+    private var puntuacion = 0
 
     // The list of words - the front of the list is the next word to guess
-    private lateinit var wordList: MutableList<String>
+    private lateinit var listaDePalabras: MutableList<String>
 
     private lateinit var binding: JuegoFragmentBinding
 
@@ -53,13 +53,13 @@ class JuegoFragment : Fragment() {
                 false
         )
 
-        resetList()
-        nextWord()
+        reiniciarLista()
+        siguientePalabra()
 
-        binding.correctButton.setOnClickListener { onCorrect() }
-        binding.skipButton.setOnClickListener { onSkip() }
-        updateScoreText()
-        updateWordText()
+        binding.loConseguisteButton.setOnClickListener { clickLoConseguiste() }
+        binding.omitirButton.setOnClickListener { clickOmitir() }
+        actualizarTextoDePuntuacion()
+        actualizarTextoDePalabra()
         return binding.root
 
     }
@@ -67,8 +67,8 @@ class JuegoFragment : Fragment() {
     /**
      * Resets the list of words and randomizes the order
      */
-    private fun resetList() {
-        wordList = mutableListOf(
+    private fun reiniciarLista() {
+        listaDePalabras = mutableListOf(
                 "princesa",
                 "hospital",
                 "baloncesto",
@@ -91,51 +91,51 @@ class JuegoFragment : Fragment() {
                 "botella",
                 "arma"
         )
-        wordList.shuffle()
+        listaDePalabras.shuffle()
     }
 
     /**
      * Called when the game is finished
      */
-    private fun gameFinished() {
-        val action = JuegoFragmentDirections.actionGameToScore(score)
+    private fun juegoTerminado() {
+        val action = JuegoFragmentDirections.actionGameToScore(puntuacion)
         findNavController(this).navigate(action)
     }
 
     /**
      * Moves to the next word in the list
      */
-    private fun nextWord() {
+    private fun siguientePalabra() {
         //Select and remove a word from the list
-        if (wordList.isEmpty()) {
-            gameFinished()
+        if (listaDePalabras.isEmpty()) {
+            juegoTerminado()
         } else {
-            word = wordList.removeAt(0)
+            palabra = listaDePalabras.removeAt(0)
         }
-        updateWordText()
-        updateScoreText()
+        actualizarTextoDePalabra()
+        actualizarTextoDePuntuacion()
     }
 
     /** Methods for buttons presses **/
 
-    private fun onSkip() {
-        score--
-        nextWord()
+    private fun clickOmitir() {
+        puntuacion--
+        siguientePalabra()
     }
 
-    private fun onCorrect() {
-        score++
-        nextWord()
+    private fun clickLoConseguiste() {
+        puntuacion++
+        siguientePalabra()
     }
 
     /** Methods for updating the UI **/
 
-    private fun updateWordText() {
-        binding.wordText.text = word
+    private fun actualizarTextoDePalabra() {
+        binding.palabraText.text = palabra
 
     }
 
-    private fun updateScoreText() {
-        binding.scoreText.text = score.toString()
+    private fun actualizarTextoDePuntuacion() {
+        binding.puntuacionText.text = puntuacion.toString()
     }
 }

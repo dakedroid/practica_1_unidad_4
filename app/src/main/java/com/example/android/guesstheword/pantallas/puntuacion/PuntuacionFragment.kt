@@ -48,8 +48,8 @@ class PuntuacionFragment : Fragment() {
 
         // Get args using by navArgs property delegate
         val scoreFragmentArgs by navArgs<PuntuacionFragmentArgs>()
-        binding.scoreText.text = scoreFragmentArgs.score.toString()
-        binding.playAgainButton.setOnClickListener { onPlayAgain() }
+        binding.puntuacionText.text = scoreFragmentArgs.score.toString()
+        binding.jugarDeNuevoButton.setOnClickListener { onPlayAgain() }
 
         return binding.root
     }
